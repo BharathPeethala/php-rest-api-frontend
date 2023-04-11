@@ -1,0 +1,30 @@
+.userForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#usersTable{
+    margin: 20px;
+}
+i:hover{
+    cursor: pointer;
+}
+.form-control {
+	margin: 10px;
+}
+
+#input-state{
+    width: 450px;
+}
+
+.btn-group{
+    height: 4.5rem;
+}
+
+.nav-item{
+    font-size: 2rem;
+    padding: 10px;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Ajax</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mock API</a>
+            <div class="d-flex">
+                <i class="nav-item bi bi-binoculars-fill" onclick="fetchUsers()"></i>
+                <i class="nav-item bi bi-person-fill-add " onclick=" addRemoveUserForm()"></i>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="userForm">
+
+            <div id="addUserForm" style="display: none;">
+                <!-- <form > -->
+                <input type="text" id="input-userName" class="form-control " placeholder="Name" required>
+                <input type="number" id="input-age" class="form-control " placeholder="age" required>
+                <select class='form-control' name="input-state" id="input-state" required>
+                </select>
+                <button class="form-control btn btn-primary" onclick="addUser()">Add User</button>
+                <!-- </form> -->
+            </div>
+        </div>
+        <table class="table table-striped-columns" id="usersTable">
+        </table>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm the User</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Deleting:<span id="modal-username"></span></h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" onclick="confirmDelete()"
+                            data-bs-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</html>
